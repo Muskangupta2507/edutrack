@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema(
         email:{
             type:String,
             required:true,
-            unique:trusted
+            unique:true
         },
         enrollmentDate: {
             type: Date,
@@ -21,7 +21,10 @@ const UserSchema = new mongoose.Schema(
         state:String,
         country:String,
         course:String,
-        contactNo:Number,
+        contactNo:{
+            type:Number,
+            unique:true
+        },
         courseProgress:{
             type: Number,
             min:0,

@@ -7,6 +7,11 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import generalRoutes from './routes/general.js'
 
+// models
+import User from './models/User.js';
+
+import { dataUser } from './data/index.js';
+
 // configuration
 
 dotenv.config();
@@ -27,5 +32,7 @@ app.use("/general",generalRoutes);
 const PORT = process.env.PORT;
 // const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/dashboard').then(()=>{
-    app.listen(PORT,()=>{console.log("mongodb connected")})
+    app.listen(PORT,()=>{console.log("mongodb connected")});
+    // User.insertMany(dataUser);
+
 }).catch((err)=>{console.log(`${err}`)});
