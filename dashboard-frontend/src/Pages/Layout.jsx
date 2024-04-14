@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, useMediaQuery } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-import Navbar from 'Components/Navbar';
+import Navbar from '../Components/Navbar';
 
 const Layout = () => {
   return (

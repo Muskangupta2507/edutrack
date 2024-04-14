@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import {createTheme} from '@mui/material/styles'
-import {themeSettings} from "theme";
+import {themeSettings} from './theme';
 import { useSelector } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import DashBoard from 'Pages/DashBoard';
-import Layout from 'Pages/Layout';
+import DashBoard from './Pages/DashBoard';
+import Layout from './Pages/Layout';
 
 
 const App = () => {
