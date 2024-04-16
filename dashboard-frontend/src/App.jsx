@@ -6,14 +6,9 @@ import { useSelector } from 'react-redux';
 import {BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard';
 import Layout from './Pages/Layout';
-<<<<<<< HEAD
 import Courses from "./Pages/Courses.jsx";
 import Student from "./Pages/Students.jsx"
 
-=======
-import Courses from "./Pages/Courses.jsx"
-import Student from "./Pages/Students.jsx"
->>>>>>> 085cc68702d8ecc28dd7e9fd032b7741a38812c0
 
 const App = () => {
 
@@ -30,6 +25,8 @@ const App = () => {
               <Route path="/dashboard" element={<DashBoard />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/students" element={<Student />} />
+
+
               {/* <Route path="/transactions" element={<Transactions />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />} />
@@ -38,6 +35,8 @@ const App = () => {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/performance" element={<Performance />} /> */}
+
+
             </Route>
           </Routes>
         </ThemeProvider>
