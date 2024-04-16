@@ -172,7 +172,6 @@ export const dataCourse= [
   },
 ];
 
-
 export const dataCourseStat = [
   {
     _id: "6371259df03239e680000035",
