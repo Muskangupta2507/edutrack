@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import {BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard';
 import Layout from './Pages/Layout';
-
+import Courses from "Pages/Courses"
 
 
 const App = () => {
@@ -22,8 +22,8 @@ const App = () => {
               <Route element={<Layout />}>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<DashBoard />} />
-              {/* <Route path="/courses" element={<Courses />} />
-              <Route path="/students" element={<Students />} />
+              <Route path="/courses" element={<Courses />} />
+              {/* <Route path="/students" element={<Students />} />
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />} />

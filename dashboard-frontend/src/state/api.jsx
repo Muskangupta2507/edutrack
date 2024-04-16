@@ -12,11 +12,12 @@ export const api = createApi({
             providesTags:["User"]
         }),
         getCourse:build.query({
-            query:()=>"student/courses"
-        })
-    })
-})
+            query:()=>"student/courses",
+            providesTags:["Courses"],
+        }),
+    }),
+});
 
 export const {
-    useGetUserQuery
+    useGetUserQuery, useGetCourseQuery
 } = api

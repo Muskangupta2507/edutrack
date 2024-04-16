@@ -13,13 +13,6 @@ const CourseStatSchema = new mongoose.Schema(
         totalUnits: Number,
       },
     ],
-    dailyData: [
-      {
-        date: String,
-        totalSales: Number,
-        totalUnits: Number,
-      },
-    ],
   },
   { timestamps: true }
 );
