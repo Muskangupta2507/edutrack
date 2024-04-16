@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setMode } from '../state';
 import { AppBar, IconButton, InputBase, Toolbar, useTheme } from '@mui/material';
 
-const Navbar = () => {
+const  Navbar = () => {
     const dispatch = useDispatch();
     const theme = useTheme();
   return (
