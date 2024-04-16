@@ -17,8 +17,8 @@ import { useGetCourseQuery } from "../state/api";
 const Course =({
     _id,
     name,
-    description,
     price,
+    description,
     rating,
     category,
     supply,
@@ -108,8 +108,8 @@ const Courses = () => {
               ({
                 _id,
                 name,
-                description,
                 price,
+                description,
                 rating,
                 category,
                 supply,
@@ -119,8 +119,8 @@ const Courses = () => {
                   key={_id}
                   _id={_id}
                   name={name}
-                  description={description}
                   price={price}
+                  description={description}
                   rating={rating}
                   category={category}
                   supply={supply}
