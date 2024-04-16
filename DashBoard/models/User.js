@@ -20,6 +20,7 @@ const UserSchema = new mongoose.Schema(
         city:String,
         state:String,
         country:String,
+        continent:String,
         course:String,
         contactNo:{
             type:Number,
@@ -30,7 +31,8 @@ const UserSchema = new mongoose.Schema(
             min:0,
             max:100
         }
-    }
+    },
+    {timestamps:true}
 );
 
 const User = mongoose.model("User",UserSchema);
