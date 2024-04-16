@@ -180,7 +180,6 @@ export const dataCourse= [
   },
 ];
 
-
 export const dataCourseStat = [
   {
     Productid: "63701d24f03239c72c00018e",
