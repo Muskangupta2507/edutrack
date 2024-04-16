@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import {BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard';
 import Layout from './Pages/Layout';
-import Courses from "Pages/Courses"
+import Courses from "./Pages/Courses"
 
 
 const App = () => {
