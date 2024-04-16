@@ -30,6 +30,10 @@ const UserSchema = new mongoose.Schema(
             type: Number,
             min:0,
             max:100
+        },
+        courseType:{
+            type:String,
+            enum: ["online", "offline"]
         }
     },
     {timestamps:true}
