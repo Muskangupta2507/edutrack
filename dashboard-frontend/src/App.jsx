@@ -6,13 +6,8 @@ import { useSelector } from 'react-redux';
 import {BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard';
 import Layout from './Pages/Layout';
-<<<<<<< HEAD
 import Courses from "./Pages/Courses.jsx"
-
-=======
-import Courses from "./Pages/Courses";
-import Student from "./Pages/Students";
->>>>>>> 85e7f13a8cd9fefab9788e05eb198432d2372551
+import Student from "./Pages/Students.jsx"
 
 const App = () => {
 
