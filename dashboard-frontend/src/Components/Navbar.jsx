@@ -26,7 +26,7 @@ const Navbar = ({user,isSidebarOpen,setIsSidebarOpen,}) => {
         <FlexBetween>
           {/* To open and close the sidebar */}
           <IconButton onClick={()=> setIsSidebarOpen(!isSidebarOpen)}>
-            <MenuIc/>
+            <MenuIc />
           </IconButton>
           <FlexBetween 
             backgroundColor = {theme.palette.background.alt}

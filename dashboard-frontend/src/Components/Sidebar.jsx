@@ -18,7 +18,7 @@ const navItems=[
         text:"Courses",
         icon: <LibraryBooksIcon/>
     },{
-        text:"Students Detail",
+        text:"Students",
         icon: <Groups2Outlined/>
     },{
       text: "Geography",
@@ -145,7 +145,7 @@ const Sidebar=({user,drawerWidth,isSidebarOpen,setIsSidebarOpen,isNonMobile}) =>
 
           <Box position="absolute" bottom="2rem">
             <Divider />
-            <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+            {/* <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
                 component="img"
                 alt="profile"
@@ -153,7 +153,7 @@ const Sidebar=({user,drawerWidth,isSidebarOpen,setIsSidebarOpen,isNonMobile}) =>
                 height="40px"
                 width="40px"
                 borderRadius="50%"
-                sx={{ objectFit: "cover" }}
+                sx={{ objectFit: "cover" }} 
               />
               <Box textAlign="left">
                 <Typography
@@ -175,8 +175,8 @@ const Sidebar=({user,drawerWidth,isSidebarOpen,setIsSidebarOpen,isNonMobile}) =>
                   color: theme.palette.secondary[300],
                   fontSize: "25px ",
                 }}
-              />
-            </FlexBetween>
+              /> 
+            </FlexBetween>*/}
           </Box>
         </Drawer>
       )}
