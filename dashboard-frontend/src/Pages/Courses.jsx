@@ -86,54 +86,55 @@ const Course =({
 };
 
 const Courses = () => {
-    const { data, isLoading } = useGetCourseQuery();
-    const isNonMobile = useMediaQuery("(min-width: 1000px)");
-  
-    return (
-      <Box m="1.5rem 2.5rem">
-        <Header title="COURSES" subtitle="See your list of products." />
-        {data || !isLoading ? (
-          <Box
-            mt="20px"
-            display="grid"
-            gridTemplateColumns="repeat(4, minmax(0, 1fr))"
-            justifyContent="space-between"
-            rowGap="20px"
-            columnGap="1.33%"
-            sx={{
-              "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
-            }}
-          >
-            {data.map(
-              ({
-                _id,
-                name,
-                price,
-                description,
-                rating,
-                category,
-                supply,
-                stat,
-              }) => (
-                <Course
-                  key={_id}
-                  _id={_id}
-                  name={name}
-                  price={price}
-                  description={description}
-                  rating={rating}
-                  category={category}
-                  supply={supply}
-                  stat={stat}
-                />
-              )
-            )}
-          </Box>
-        ) : (
-          <>Loading...</>
-        )}
-      </Box>
-    );
-  };
+  const { data, isLoading } = useGetCourseQuery();
+  const isNonMobile = useMediaQuery("(min-width: 1000px)");
+
+  return (
+    <Box m="1.5rem 2.5rem">
+      <Header title="COURSES" subtitle="See your list of products." />
+      {data && !isLoading ? (
+        <Box
+          mt="20px"
+          display="grid"
+          gridTemplateColumns="repeat(4, minmax(0, 1fr))"
+          justifyContent="space-between"
+          rowGap="20px"
+          columnGap="1.33%"
+          sx={{
+            "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
+          }}
+        >
+          {data.map(
+            ({
+              _id,
+              name,
+              price,
+              description,
+              rating,
+              category,
+              supply,
+              stat,
+            }) => (
+              <Course
+                key={_id}
+                _id={_id}
+                name={name}
+                price={price}
+                description={description}
+                rating={rating}
+                category={category}
+                supply={supply}
+                stat={stat}
+              />
+            )
+          )}
+        </Box>
+      ) : (
+        <>Loading...</>
+      )}
+    </Box>
+  );
+};
+
 
 export default Courses
