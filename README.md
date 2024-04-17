@@ -59,4 +59,5 @@ npm install
 
 # If using yarn
 yarn install
+
 Run the application on a web server to visualize course sales data.
