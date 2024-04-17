@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import generalRoutes from './routes/general.js'
 import StudentsRoutes from './routes/Student.js'
+// import SalesRoutes from './routes/sales.js'
 
 // models
 import User from './models/User.js';
@@ -26,6 +27,7 @@ app.use(cors());
 
 // Routes
 app.use("/student",StudentsRoutes);
+// app.use("/sales",SalesRoutes);
 app.use("/general",generalRoutes);
 
 

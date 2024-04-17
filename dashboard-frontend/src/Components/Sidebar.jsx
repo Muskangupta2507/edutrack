@@ -19,34 +19,34 @@ const navItems=[
     },{
         text:"Students",
         icon: <Groups2Outlined/>
-    },{
-      text: "Geography",
-      icon: <PublicOutlined />,
-    },{
+    },
+    // {
+    //   text: "Geography",
+    //   icon: <PublicOutlined />,
+    // },
+    {
       text: "Sales",
       icon: null,
     },{
       text: "Overview",
       icon: <PointOfSaleOutlined />,
-    },{
-      text: "Daily",
-      icon: <TodayOutlined />,
-    },{
-      text: "Monthly",
-      icon: <CalendarMonthOutlined />,
-    },{
-      text: "Breakdown",
-      icon: <PieChartOutlined />,
-    },{
-      text: "Management",
-      icon: null,
-    },{
-      text: "Admin",
-      icon: <AdminPanelSettingsOutlined />,
-    },{
-      text: "Performance",
-      icon: <TrendingUpOutlined />,
     },
+    // {
+    //   text: "Monthly",
+    //   icon: <CalendarMonthOutlined />,
+    // },{
+    //   text: "Breakdown",
+    //   icon: <PieChartOutlined />,
+    // },{
+    //   text: "Management",
+    //   icon: null,
+    // },{
+    //   text: "Admin",
+    //   icon: <AdminPanelSettingsOutlined />,
+    // },{
+    //   text: "Performance",
+    //   icon: <TrendingUpOutlined />,
+    // },
 ];
 
 const Sidebar=({user,drawerWidth,isSidebarOpen,setIsSidebarOpen,isNonMobile}) => {

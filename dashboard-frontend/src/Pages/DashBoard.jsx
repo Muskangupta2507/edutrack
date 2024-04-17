@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 // import BreakdownChart from "../Components/BreakdownChart";
-// import OverviewChart from "../Components/OverviewChart";
+import OverviewChart from "../Components/OverviewChart";
 import { useGetDashboardQuery, useGetStudentsQuery } from "../state/api";
 // import StatBox from "../Components/StatBox";
 
@@ -148,9 +148,10 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={theme.palette.background.alt}
           p="1rem"
-          borderRadius="0.55rem"
+          borderRadius="0.50rem"
         >
-          {/* <OverviewChart view="sales" isDashboard={true} /> */}
+          <OverviewChart view="2024" isDashboard={true} />
+          {/* <Box>Online And Offline Sales Data of 2024</Box> */}
         </Box>
         {/* <StatBox
           title="Monthly Sales"
