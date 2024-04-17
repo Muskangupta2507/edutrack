@@ -46,7 +46,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       {
         year: "2022",
         monthySales: [
-          { month: "January", OnlineSale: 100, OfflineSale: 50 },
+          { month: "January", OnlineSale: 0, OfflineSale: 50 },
           { month: "February", OnlineSale: 110, OfflineSale: 55 },
           { month: "March", OnlineSale: 120, OfflineSale: 60 },
           { month: "April", OnlineSale: 130, OfflineSale: 65 },
@@ -57,7 +57,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
           { month: "September", OnlineSale: 180, OfflineSale: 90 },
           { month: "October", OnlineSale: 190, OfflineSale: 95 },
           { month: "November", OnlineSale: 200, OfflineSale: 100 },
-          { month: "December", OnlineSale: 210, OfflineSale: 105 },
+          { month: "December", OnlineSale: 0, OfflineSale: 105 },
         ],
         totalYearlyOnlineSales: 1950,
         totalYearlyOfflineSales: 975,
