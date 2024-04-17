@@ -9,6 +9,7 @@ import Layout from './Pages/Layout';
 import Courses from "./Pages/Courses.jsx"
 import Student from "./Pages/Students.jsx"
 
+
 const App = () => {
 
   const mode = useSelector((state)=>state.global.mode);

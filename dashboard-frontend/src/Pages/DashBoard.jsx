@@ -18,15 +18,16 @@ import {
 import { DataGrid } from "@mui/x-data-grid";
 // import BreakdownChart from "../Components/BreakdownChart";
 // import OverviewChart from "../Components/OverviewChart";
-import { useGetDashboardQuery } from "../state/api";
+import { useGetDashboardQuery, useGetStudentsQuery } from "../state/api";
 // import StatBox from "../Components/StatBox";
 
 const Dashboard = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
-  const { data, isLoading } = useGetDashboardQuery();
+  const { dashboardData, isDshbaordLoading } = useGetDashboardQuery();
+  const { data, isLoading } = useGetStudentsQuery();
 
-  const columns = [
+  const columnsData = [
     {
       field: "_id",
       headerName: "ID",
@@ -54,6 +55,52 @@ const Dashboard = () => {
       headerName: "Cost",
       flex: 1,
       renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
+    },
+  ];
+
+  const columns = [
+    {
+      field: "name",
+      headerName: "Name",
+      flex: 0.6,
+    },
+    {
+      field: "course",
+      headerName: "Course",
+      flex: 0.7,
+    },
+    {
+      field: "email",
+      headerName: "Email",
+      flex: 0.6,
+    },
+    {
+      field: "contactNo",
+      headerName: "Phone Number",
+      flex: 0.5,
+      // renderCell: (params) => {
+      //   return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
+      // },
+    },
+    {
+      field: "country",
+      headerName: "Country",
+      flex: 0.4,
+    },
+    {
+      field: "courseProgress",
+      headerName: "Course Progress(in %)",
+      flex: 0.5,
+    },
+    {
+      field: "courseType",
+      headerName: "Course Type",
+      flex: 0.6,
+    },
+    {
+      field: "state",
+      headerName: "State",
+      flex: 0.6,
     },
   ];
 
@@ -161,7 +208,7 @@ const Dashboard = () => {
           <DataGrid
             loading={isLoading || !data}
             getRowId={(row) => row._id}
-            rows={(data && data.transactions) || []}
+            rows={(data) || []}
             columns={columns}
           />
         </Box>

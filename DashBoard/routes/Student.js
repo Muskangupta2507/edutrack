@@ -8,7 +8,7 @@ import {
 const router = express.Router();
 
 router.get("/courses", getCourses);
-router.get("/Student", getStudents);
+router.get("/students", getStudents);
 router.get("/geography", getGeography);
 
 export default router;

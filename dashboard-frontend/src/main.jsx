@@ -6,7 +6,8 @@ import { configureStore } from '@reduxjs/toolkit';
 import globalReducer from './state'
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import {api} from "./state/api.jsx"
+// import {api} from "./state/api.jsx";
+import { api } from './state/api.jsx';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 const store = configureStore({
