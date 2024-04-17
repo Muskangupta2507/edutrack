@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import generalRoutes from './routes/general.js'
@@ -16,9 +15,8 @@ import { dataUser, dataCourse ,dataCourseStat } from './data/index.js';
 
 // configuration
 
-dotenv.config();
 const app = express();
-app.use(express.json);
+app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
 app.use(morgan("common"));
@@ -32,11 +30,11 @@ app.use("/general",generalRoutes);
 
 
 // mongoose setup
-const PORT = process.env.PORT;
+const PORT = 5001;
 
 // const mongoose = require('mongoose');
-// mongoose.connect('mongodb+srv://07muskangupta:EDUTRACK07@cluster0.mkjxrnb.mongodb.net/?retryWrites=true&w=majority')
-mongoose.connect('mongodb://127.0.0.1:27017/dashboard')
+mongoose.connect('mongodb+srv://07muskangupta:EDUTRACK07@cluster0.mkjxrnb.mongodb.net/?retryWrites=true&w=majority')
+// mongoose.connect('mongodb://127.0.0.1:27017/dashboard')
 .then(()=>{
     app.listen(PORT,()=>{console.log("mongodb connected")});
     // Courses.insertMany(dataCourse);
@@ -45,3 +43,4 @@ mongoose.connect('mongodb://127.0.0.1:27017/dashboard')
 
 })
 .catch((err)=>{console.log(`${err}`)});
+
