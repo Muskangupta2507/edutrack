@@ -9,7 +9,6 @@ import Layout from './Pages/Layout';
 import Courses from "./Pages/Courses.jsx"
 import Student from "./Pages/Students.jsx"
 
-
 const App = () => {
 
   const mode = useSelector((state)=>state.global.mode);
@@ -25,10 +24,9 @@ const App = () => {
               <Route path="/dashboard" element={<DashBoard />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/students" element={<Student />} />
-              {/* <Route path="/transactions" element={<Transactions />} />
+              {/*
               <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />} />
-              <Route path="/daily" element={<Daily />} />
               <Route path="/monthly" element={<Monthly />} />
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />

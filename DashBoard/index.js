@@ -33,8 +33,8 @@ app.use("/general",generalRoutes);
 const PORT = 5000;
 
 // const mongoose = require('mongoose');
-// mongoose.connect('mongodb+srv://07muskangupta:EDUTRACK07@cluster0.mkjxrnb.mongodb.net/?retryWrites=true&w=majority')
-mongoose.connect('mongodb://127.0.0.1:27017/dashboard-2')
+mongoose.connect('mongodb+srv://07muskangupta:EDUTRACK07@cluster0.mkjxrnb.mongodb.net/?retryWrites=true&w=majority')
+// mongoose.connect('mongodb://127.0.0.1:27017/dashboard-2')
 .then(()=>{
     app.listen(PORT,()=>{console.log("mongodb connected")});
     // Courses.insertMany(dataCourse);
