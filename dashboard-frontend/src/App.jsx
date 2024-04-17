@@ -7,7 +7,8 @@ import {BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard';
 import Layout from './Pages/Layout';
 import Courses from "./Pages/Courses.jsx"
-import Student from "./Pages/Students.jsx"
+import Student from "./Pages/Students.jsx";
+import Overview from './Pages/Overview.jsx';
 
 const App = () => {
 
@@ -24,9 +25,10 @@ const App = () => {
               <Route path="/dashboard" element={<DashBoard />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/students" element={<Student />} />
-              {/*
-              <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />} />
+              {/* <Route path="/transactions" element={<Transactions />} />
+              <Route path="/geography" element={<Geography />} />
+              <Route path="/daily" element={<Daily />} />
               <Route path="/monthly" element={<Monthly />} />
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
